@@ -6,6 +6,6 @@ LIB		= lib
 %.o: %.c
 	clang -std=c17 -O2 -c -o $@ $<
 
-$(LIB)/strconv.a: $(OFILES)
+$(LIB)/libstrconv.a: $(OFILES)
 	@[ -d $(LIB) ] || mkdir -p $(LIB)
 	ar rcs $@ $^
